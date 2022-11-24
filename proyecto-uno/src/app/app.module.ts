@@ -18,6 +18,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { PagesComponent } from './pages/pages.component';
 import { ProductComponent } from './pages/product/product.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CatalogueComponent } from './pages/catalogue/catalogue.component';
    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
