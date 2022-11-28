@@ -1,49 +1,41 @@
+import { PagesModule } from './pages/pages.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { NotFoundModule } from './not-found/not-found.module';
+import { AuthModule } from './auth/auth.module';
+import { StaticModule } from './static/static.module';
+
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { UserComponent } from './user/user/user.component';
-import { HeaderComponent } from './static/header/header.component';
-import { NavComponent } from './static/nav/nav.component';
-import { FooterComponent } from './static/footer/footer.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { LoginComponent } from './auth/login/login.component';
-import { BreadcrumbsComponent } from './static/breadcrumbs/breadcrumbs.component';
-import { SidebarComponent } from './static/sidebar/sidebar.component';
-import { RegisterComponent } from './auth/register/register.component';
 import { PagesComponent } from './pages/pages.component';
-import { ProductComponent } from './pages/product/product.component';
-import { CatalogueComponent } from './pages/catalogue/catalogue.component';
-import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthComponent } from './auth/auth.component';
+import { StaticComponent } from './static/static.component';
+import { UserComponent } from './user/user.component';
+import { UserModule } from './user/user.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    UserComponent,
-    RegisterComponent,
-    HeaderComponent,
-    NavComponent,
-    FooterComponent,
-    DashboardComponent,
-    NotfoundComponent,
-    LoginComponent,
-    BreadcrumbsComponent,
-    SidebarComponent,
+    NotFoundComponent,
     PagesComponent,
-    ProductComponent,
-    CatalogueComponent,
-   
+    AuthComponent,
+    StaticComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NotFoundModule,
+    AuthModule,
+    PagesModule,
+    StaticModule,
+    UserModule
+
+   
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
